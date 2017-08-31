@@ -16,6 +16,7 @@
 */obj/
 */Resource/
 */.vscode/
+*/bower_components/
 /.vscode/
 /packages/
 /.vs/
