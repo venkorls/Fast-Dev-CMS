@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="~/Content/js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="~/Content/js/Vue/vue.js"></script>
+    <script src="~/Content/js/FileUpload/vue2-dropzone.js"></script>
+</head>
+<body>
+    <template>
+        <div id="app">
+            <p>Welcome to your Vue.js app!</p>
+
+            <dropzone id="myVueDropzone"
+                      url="https://httpbin.org/post"
+                      v-on:vdropzone-success="showSuccess"
+                      v-bind:preview-template="template">
+                <!-- Optional parameters if any! -->
+                <input type="hidden" name="token" value="xxx">
+            </dropzone>
+
+        </div>
+    </template>
+    <script>
+
+        var app = new Vue({
+            el: '#app',
+            components: {
+                dropzone: Dropzone
+            },
+            methods: {
+                'showSuccess': function (file) {
+                    console.log('A file was successfully uploaded')
+                },
+                'template': function () {
+                    return `
+                  <div class="dz-preview dz-file-preview">
+                      <div class="dz-image" style="width: 200px;height: 200px">
+                          <img data-dz-thumbnail /></div>
+                      <div class="dz-details">
+                        <div class="dz-size"><span data-dz-size></span></div>
+                        <div class="dz-filename"><span data-dz-name></span></div>
+                      </div>
+                      <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+                      <div class="dz-error-message"><span data-dz-errormessage></span></div>
+                      <div class="dz-success-mark"><i class="fa fa-check"></i></div>
+                      <div class="dz-error-mark"><i class="fa fa-close"></i></div>
+                  </div>
+              `;
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

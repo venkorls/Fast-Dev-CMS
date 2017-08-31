@@ -1,0 +1,17 @@
+{
+  "name": "nfine.web",
+  "description": "vueweb",
+  "main": "main.js",
+  "keywords": [
+    "nfine"
+  ],
+  "authors": [
+    "lww"
+  ],
+  "license": "MIT",
+  "homepage": "http://localhost:8039",
+  "private": true,
+  "dependencies": {
+    "lodash": "4.17.4"
+  }
+}
