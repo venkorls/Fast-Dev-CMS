@@ -1,7 +1,4 @@
-.gitignore 
-/packages
-/.vs
-/.vscode
+
 #Built application files
 *.apk
 *.ap_
@@ -17,8 +14,12 @@
 */gen/
 */out/
 */obj/
-*/.vscode/
 */Resource/
+*/.vscode/
+/.vscode/
+/packages/
+/.vs/
+
 
 # Gradle files
 .gradle/
