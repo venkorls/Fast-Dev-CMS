@@ -17,6 +17,9 @@
 */gen/
 */out/
 */obj/
+*/.vscode/
+*/Resource/
+
 # Gradle files
 .gradle/
 build/
