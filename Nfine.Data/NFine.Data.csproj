@@ -58,6 +58,14 @@
     <Compile Include="DBContext\NFineDbContext.cs" />
     <Compile Include="Extensions\DbHelper.cs" />
     <Compile Include="Extensions\EntityInterfaceExtensions.cs" />
+    <Compile Include="Migrations\201711220520006_addNews.cs" />
+    <Compile Include="Migrations\201711220520006_addNews.Designer.cs">
+      <DependentUpon>201711220520006_addNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711220636555_modifyNews.cs" />
+    <Compile Include="Migrations\201711220636555_modifyNews.Designer.cs">
+      <DependentUpon>201711220636555_modifyNews.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository\IRepositoryBase.cs" />
     <Compile Include="Repository\IRepositoryBase.T.cs" />
@@ -74,6 +82,17 @@
       <Project>{db19ce03-c307-43fe-a209-08aa4ae10e21}</Project>
       <Name>NFine.Code</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711220520006_addNews.resx">
+      <DependentUpon>201711220520006_addNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711220636555_modifyNews.resx">
+      <DependentUpon>201711220636555_modifyNews.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

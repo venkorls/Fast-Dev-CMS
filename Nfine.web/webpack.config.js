@@ -2,11 +2,11 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-    entry: './js/src/main.js',
+    entry: './src/js/index.js',
     output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
-        filename: 'build.js'
+        path: path.resolve(__dirname, './dist/js'),
+        publicPath: 'http://localhost:8080/assets/',
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -40,7 +40,10 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
-        noInfo: true
+        noInfo: true,
+        contentBase: "./dist",
+        inline: true,
+        hot:true
     },
     performance: {
         hints: false
@@ -50,7 +53,7 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
     module.exports.devtool = '#source-map'
-    // http://vue-loader.vuejs.org/en/workflow/production.html
+    // http://vue-loader.vuejs.org/en/Web/production.html
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({
             'process.env': {

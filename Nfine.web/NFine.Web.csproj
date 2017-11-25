@@ -116,6 +116,8 @@
     <Compile Include="App_Start\01 Handler\HandlerErrorAttribute.cs" />
     <Compile Include="App_Start\01 Handler\HandlerLoginAttribute.cs" />
     <Compile Include="App_Start\01 Handler\ControllerBase.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\BarCodeController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\PrintController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\SendMailController.cs" />
@@ -141,6 +143,9 @@
     <Compile Include="Areas\SystemSecurity\Controllers\LogController.cs" />
     <Compile Include="Areas\SystemSecurity\Controllers\ServerMonitoringController.cs" />
     <Compile Include="Areas\SystemSecurity\SystemSecurityAreaRegistration.cs" />
+    <Compile Include="Areas\Web\Controllers\HomePartialController.cs" />
+    <Compile Include="Areas\Web\Controllers\WebHomeController.cs" />
+    <Compile Include="Areas\Web\WebAreaRegistration.cs" />
     <Compile Include="Controllers\ClientsDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -153,6 +158,94 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Content Include="Areas\SystemManage\Scripts\UserInfo.js" />
+    <Content Include="Areas\Web\images\add.png" />
+    <Content Include="Areas\Web\images\attention.png" />
+    <Content Include="Areas\Web\images\breadcrumb-arrow.png" />
+    <Content Include="Areas\Web\images\breadcrumb-home.png" />
+    <Content Include="Areas\Web\images\bridge.jpg" />
+    <Content Include="Areas\Web\images\current.png" />
+    <Content Include="Areas\Web\images\demand.png" />
+    <Content Include="Areas\Web\images\drop.png" />
+    <Content Include="Areas\Web\images\error.png" />
+    <Content Include="Areas\Web\images\face.png" />
+    <Content Include="Areas\Web\images\grey.png" />
+    <Content Include="Areas\Web\images\help-1.png" />
+    <Content Include="Areas\Web\images\help-2.png" />
+    <Content Include="Areas\Web\images\help-3.png" />
+    <Content Include="Areas\Web\images\help-4.png" />
+    <Content Include="Areas\Web\images\hint.png" />
+    <Content Include="Areas\Web\images\icon-1.png" />
+    <Content Include="Areas\Web\images\icon-2.png" />
+    <Content Include="Areas\Web\images\icon-3.png" />
+    <Content Include="Areas\Web\images\icon-4.png" />
+    <Content Include="Areas\Web\images\icon-5.png" />
+    <Content Include="Areas\Web\images\icon-6.png" />
+    <Content Include="Areas\Web\images\icon-7.png" />
+    <Content Include="Areas\Web\images\idcode.png" />
+    <Content Include="Areas\Web\images\im-1.png" />
+    <Content Include="Areas\Web\images\im-2.png" />
+    <Content Include="Areas\Web\images\im-3.png" />
+    <Content Include="Areas\Web\images\im-4.png" />
+    <Content Include="Areas\Web\images\im.png" />
+    <Content Include="Areas\Web\images\left-1.png" />
+    <Content Include="Areas\Web\images\left-2.png" />
+    <Content Include="Areas\Web\images\left-3.png" />
+    <Content Include="Areas\Web\images\left-4.png" />
+    <Content Include="Areas\Web\images\left-5.png" />
+    <Content Include="Areas\Web\images\leftnav.png" />
+    <Content Include="Areas\Web\images\link-1.png" />
+    <Content Include="Areas\Web\images\link-2.png" />
+    <Content Include="Areas\Web\images\link-3.png" />
+    <Content Include="Areas\Web\images\logo.png" />
+    <Content Include="Areas\Web\images\next.jpg" />
+    <Content Include="Areas\Web\images\notice.png" />
+    <Content Include="Areas\Web\images\paly.png" />
+    <Content Include="Areas\Web\images\password.png" />
+    <Content Include="Areas\Web\images\pic.png" />
+    <Content Include="Areas\Web\images\prev.jpg" />
+    <Content Include="Areas\Web\images\reply.png" />
+    <Content Include="Areas\Web\images\ring.png" />
+    <Content Include="Areas\Web\images\search.png" />
+    <Content Include="Areas\Web\images\select.png" />
+    <Content Include="Areas\Web\images\star.png" />
+    <Content Include="Areas\Web\images\student.jpg" />
+    <Content Include="Areas\Web\images\sub.png" />
+    <Content Include="Areas\Web\images\success.png" />
+    <Content Include="Areas\Web\images\supply.png" />
+    <Content Include="Areas\Web\images\tel-1.png" />
+    <Content Include="Areas\Web\images\tel-2.png" />
+    <Content Include="Areas\Web\images\username.png" />
+    <Content Include="Areas\Web\images\world-1.png" />
+    <Content Include="Areas\Web\images\world-2.png" />
+    <Content Include="Areas\Web\images\world-3.png" />
+    <Content Include="Areas\Web\images\world-4.png" />
+    <Content Include="Areas\Web\Scripts\jquery.min.js" />
+    <Content Include="Areas\Web\Scripts\photoslide.js" />
+    <Content Include="Areas\Web\Scripts\slidetab.js" />
+    <Content Include="Areas\Web\style\album.css" />
+    <Content Include="Areas\Web\style\blank.gif" />
+    <Content Include="Areas\Web\style\detail.css" />
+    <Content Include="Areas\Web\style\iepngfix.htc" />
+    <Content Include="Areas\Web\style\layout.css" />
+    <Content Include="Areas\Web\style\master.css" />
+    <Content Include="Areas\Web\upload\1.jpg" />
+    <Content Include="Areas\Web\upload\10.jpg" />
+    <Content Include="Areas\Web\upload\11.jpg" />
+    <Content Include="Areas\Web\upload\12.jpg" />
+    <Content Include="Areas\Web\upload\13.jpg" />
+    <Content Include="Areas\Web\upload\2.jpg" />
+    <Content Include="Areas\Web\upload\3.jpg" />
+    <Content Include="Areas\Web\upload\4.jpg" />
+    <Content Include="Areas\Web\upload\5.jpg" />
+    <Content Include="Areas\Web\upload\6.jpg" />
+    <Content Include="Areas\Web\upload\7.jpg" />
+    <Content Include="Areas\Web\upload\8.jpg" />
+    <Content Include="Areas\Web\upload\9.jpg" />
+    <Content Include="Areas\Web\upload\face-1.jpg" />
+    <Content Include="Areas\Web\upload\face-2.jpg" />
+    <Content Include="Areas\Web\upload\face-3.jpg" />
+    <Content Include="Areas\Web\upload\face-4.jpg" />
+    <Content Include="Areas\Web\upload\face-5.jpg" />
     <Content Include="Content\css\framework-font.css" />
     <Content Include="Content\css\framework-ui.css" />
     <Content Include="Content\css\framework-login.css" />
@@ -427,12 +520,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\js\Vue\vue.js" />
     <Content Include="gulpfile.js" />
-    <Content Include="index.html" />
-    <Content Include="js\dist\build.js" />
-    <Content Include="js\dist\logo.png" />
-    <Content Include="js\site.js" />
-    <Content Include="js\src\assets\logo.png" />
-    <Content Include="js\src\main.js" />
+    <Content Include="test.html" />
+    <Content Include="dist\index.html" />
+    <Content Include="src\assets\logo.png" />
+    <Content Include="src\js\index.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -483,6 +574,10 @@
     <ProjectReference Include="..\NFine.Code\NFine.Code.csproj">
       <Project>{db19ce03-c307-43fe-a209-08aa4ae10e21}</Project>
       <Name>NFine.Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFine.Data\NFine.Data.csproj">
+      <Project>{f71003e8-a836-48f4-9df6-df9095cebd18}</Project>
+      <Name>NFine.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\NFine.Domain\NFine.Domain.csproj">
       <Project>{7dc886cd-b8a0-44e8-aadd-57fcb0cfecb8}</Project>
@@ -616,7 +711,11 @@
     <Content Include="Areas\ReportManage\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Admin\Scripts\" />
     <Folder Include="Areas\ReportManage\Views\Echarts\" />
+    <Folder Include="dist\js\" />
+    <Folder Include="dist\styles\" />
+    <Folder Include="src\styles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\ReportManage\Views\Highcharts\Sample1.cshtml" />
@@ -676,9 +775,26 @@
     <Content Include="Content\js\uploadify\uploadify.php" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
-    <Content Include="js\src\App.vue" />
+    <Content Include="Areas\Web\style\_notes\layout.css.mno" />
+    <Content Include="Areas\Web\Views\HomePartial\Footer.cshtml" />
+    <Content Include="Areas\Web\Views\HomePartial\Header.cshtml" />
+    <Content Include="Areas\Web\Views\WebHome\Index.cshtml" />
+    <Content Include="Areas\Web\Views\News\Form.cshtml" />
+    <Content Include="Areas\Web\Views\News\Index.cshtml" />
+    <Content Include="Areas\Web\Views\Search\Index.cshtml" />
+    <Content Include="Areas\Web\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Web\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Web\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\News\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Form.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Details.cshtml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
     <Content Include="Views\Home\Vue.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
